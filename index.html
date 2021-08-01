@@ -1,0 +1,100 @@
+<!-- Pooja Bhagat -->
+<!-- 1/08/2021 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Agency Registration</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!--Success alert  -->
+    <div class="alert alert-success alert-dismissible fade show" style="display: none;"  id="successMsg" role="alert">
+        <strong>Success!</strong>  Your travel request has been successfully submitted
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    <!--Error alert  -->
+    <div id="errorMsg" class="alert alert-danger alert-dismissible fade show" style="display: none;" role="alert" >
+        <strong>Error!</strong> Your travel request has not been sent due to errors/ Invalid Values.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    <section class="container my-3">
+        <form>
+        <h1>Royal Travel Agency :</h1>
+        <hr>
+        <!-- For Name -->
+        <div class="mb-3">
+            <label for="userName" class="form-label">Username:</label>
+            <input type="text" class="form-control " id="userName" name="userName" placeholder="Enter your username" required>
+            <small  class="form-text  invalid-feedback" style="color: red;" >
+                Your username must be 2-10 characters long and should not start with a number
+            </small>
+        </div>
+
+        <!-- For Email -->
+        <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="text" class="form-control " id="email" name="email" placeholder="Enter your Email" required>
+            <small  class="form-text  invalid-feedback" style="color: red;">
+                Your email must be a valid email 
+            </small>
+        </div>
+
+        <!-- Select Your Car -->
+        <div class="mb-3">
+            <label for="car" class="form-label">Select your Car: </label>
+            <select class="form-control" name="car" id="car">
+                <option value="Omni">Omni</option>
+                <option value="Ford Titanium">Omni Titanium</option>
+                <option value="BMW">BMW</option>
+                <option value="Lamborgini">Lamborgini</option>
+                <option value="Tata">Tata</option>
+            </select>
+        </div>
+
+        <!-- Address -->
+        <div class="mb-3">
+            <label for="address" class="form-label">Address: </label>
+            <textarea class="form-control" name="address" id="address" rows="3" placeholder="Enter your address" required></textarea>
+        </div>
+
+        <!-- For phone -->
+        <div class="mb-3">
+            <label for="phone" class="form-label">Phone:</label>
+            <input type="text" class="form-control " id="phone" name="phone" placeholder="Enter your phone number" required>
+            <small  class="form-text  invalid-feedback" style="color: red;">
+                Your phone number must be 10 digit long
+            </small>
+        </div>
+
+        <!-- Any other message -->
+        <div class="mb-3">
+            <label for="comments" class="form-label">Any other message..</label>
+            <textarea class="form-control" id="comments" name="comments" rows="3" placeholder="Message" required></textarea>
+        </div>
+
+        <!-- Button -->
+        <button class="btn btn-primary" type="submit" id="submit">Submit</button>
+
+    </form>
+
+    </section>
+
+</body>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+<script src="index.js"></script>
+
+</html>
