@@ -16,13 +16,11 @@ let validPhone = false;
 
 // Username Event Listener
 userName.addEventListener('blur', ()=>{
-
     //  validate name here
     let regex = /^[a-zA-Z]([0-9a-zA-Z]){3,15}$/;
     // username should not start with number
     // username should be from 3 to 15 
     // usernamr should not have special characters
-
     let str = userName.value;
     if(regex.test(str)){
         userName.classList.remove('is-invalid')
@@ -39,7 +37,7 @@ userName.addEventListener('blur', ()=>{
 
 // Email Event Listener
 email.addEventListener('blur', ()=>{
-    //  validate email here 
+    //  validate email 
     let regex = /^([_\-\.0-9a-zA-Z]+)@([_\-\.0-9a-zA-Z]+).([a-zA-Z]{2,7}$)/;
     let str = email.value;
     if(regex.test(str)){
@@ -60,7 +58,6 @@ phone.addEventListener('blur', ()=>{
     //  validate phone number here
     let regex = /^[0-9]{10}$/;
     // phone number can have only numbers from 1 to 10 digits only
-    
     let str = phone.value;
     console.log(str)
     if(regex.test(str)){
@@ -82,10 +79,12 @@ let submit = document.getElementById('submit');
 submit.addEventListener('click',(e)=>{
     e.preventDefault();
     if(validEmail && validPhone && validUser){
+        error.style.display = 'none';
         success.style.display = 'Block';
         // console.log('Phone, email and user are valid. Submitting the form');
     }
     else{
+        success.style.display = 'none';
         error.style.display = 'Block';
         // console.log('One of Phone, email or user are not valid. Hence not submitting the form. Please correct the errors and try again');
     }
